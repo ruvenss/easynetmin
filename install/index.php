@@ -27,4 +27,5 @@ default:
 // Check for Binary CURL
 // Load Default Template
 include('../themes/?t=default');
+include("../themes/".$theme."/footer.php");
 ?>

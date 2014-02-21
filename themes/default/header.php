@@ -4,4 +4,5 @@
     <title><?php echo $_REQUEST['title']?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
 </head>

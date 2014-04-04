@@ -16,8 +16,9 @@ Technology
 	HTML5
 	CSS3
 	jQuery
-	PHP 5
-	MySQL 5
+	PHP 5.x
+	MySQL 5.x
+	Bash Scripting
 
 User Requierements
 ==================

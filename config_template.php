@@ -7,5 +7,6 @@ class phpCFG {
   var $dbuser = "root";
   var $dbpass = "";
   var $dbase = "easynetmin";
+  var $systemname = "easynetmin location A";
 }
 ?>

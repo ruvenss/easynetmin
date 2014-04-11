@@ -1,7 +1,7 @@
 ﻿function getDemoTheme() {
     var theme = document.body ? $.data(document.body, 'theme') : null
     if (theme == null) {
-        theme = '';
+        theme = 'metro';
     }
     else {
         return theme;
@@ -12,7 +12,7 @@
     }
 
     var theme = window.location.toString().substring(1 + themestart);
-    var url = "../../jqwidgets/styles/jqx." + theme + '.css';
+    var url = "../../widgets/styles/jqx." + theme + '.css';
 
     if (document.createStyleSheet != undefined) {
         var hasStyle = false;

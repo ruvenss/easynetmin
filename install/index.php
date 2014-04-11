@@ -35,6 +35,7 @@ default:
     <meta name="description" content="Setup will help you to set and start in a less than 3 minutes." />
     <title id='Description'>Easy Net Min 1. </title>
     <link rel="stylesheet" href="../widgets/styles/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" href="../widgets/styles/jqx.metro.css" type="text/css" />
     <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="../scripts/demos.js"></script>
     <script type="text/javascript" src="../widgets/jqxcore.js"></script>
@@ -43,6 +44,7 @@ default:
     <script type="text/javascript" src="../widgets/jqxcheckbox.js"></script>
     <script type="text/javascript" src="../widgets/jqxscrollbar.js"></script>
     <script type="text/javascript" src="../widgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../widgets/jqxinput.js"></script>
     <script type="text/javascript" src="../widgets/jqxradiobutton.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -120,13 +122,14 @@ default:
                     },
                     //Initializing the wizzard - creating all elements, adding event handlers and starting the validation
                     init: function () {
-                        $('#jqxTabs').jqxTabs({ height: 400, width: 500,  keyboardNavigation: false });
+                        $('#jqxTabs').jqxTabs({ height: 400, width: 700,  keyboardNavigation: false });
                         $('#acceptCheckBox').jqxCheckBox({ width: 250});
                         $('#nextButtonInfo').jqxButton({ width: 50});
                         $('#nextButtonBasket').jqxButton({ width: 50});
                         $('#backButtonBasket').jqxButton({ width: 50});
                         $('#backButtonReview').jqxButton({ width: 50});
                         $("#nodeopt").jqxRadioButton({ width: 250, height: 25, checked: true});
+                        $('#usernameInput').jqxInput({width: 200 });
                         $("#hqopt").jqxRadioButton({ width: 250, height: 25});
                         $("#products").jqxListBox({ source: this.config.source, width: '490px', height: '130px',  multiple: true });
                         _addHandlers();
@@ -287,6 +290,7 @@ default:
     </style>
 </head>
 <body class='default'>
+<center>
     <div id='jqxWidget'>
         <div id='jqxTabs'>
             <ul>
@@ -298,7 +302,10 @@ default:
                 <div id="form">
                     <div style='margin-top: 10px;' id='nodeopt'><?php echo $os?> NODE Setup</div>
                     <div style='margin-top: 10px;' id='hqopt'><?php echo $os?> Headquater Setup</div>
-                    <?php echo "Location : $host"; ?>
+                    
+                    <div class="inputContainer">
+                        Location :
+                        <input class="formInput" type="text" id="usernameInput" value="<?php echo $host."/easynetmin/"; ?>" /></div>
                 </div>
                 <div id="hintWrapper">
                     <div id="hintSection" class="hint">
@@ -334,5 +341,6 @@ default:
             </div>
         </div>
     </div>
+</center>
 </body>
 </html>

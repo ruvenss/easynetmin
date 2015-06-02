@@ -320,6 +320,14 @@ default:
                 </div>
             </div>
             <div class="section">
+                
+                <div class="inputContainer">
+                    Database server : 
+                    <input class="formInput" type="text" id="dbserver" value="localhost" />
+                    Database user : 
+                    <input class="formInput" type="text" id="dbuser" value="root" />
+
+                </div>
                 <div id="products">
                 </div>
                 <div class="hint" id="hintBasket">
